@@ -49,13 +49,13 @@ const TabNavigator = (props) => {
           }}
         />
 
-        {/* <Tab.Screen
+        <Tab.Screen
           name="Pay"
           component={PayScreenComponent}
           options={{
             tabBarButton: () => <PlussModal />,
           }}
-        /> */}
+        />
 
         <Tab.Screen
           name="Screen3"

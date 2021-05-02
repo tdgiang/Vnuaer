@@ -1,6 +1,6 @@
 const images = {
   iconRun: require('./images/iconRun.png'),
-  iconRun2: require('./images/iconRun2.png'),
+  iconRun4: require('./images/iconRun4.png'),
 };
 
 export default images;

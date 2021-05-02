@@ -13,7 +13,13 @@ const PlussModal = (props) => {
     <View style={styles.container}>
       <View style={styles.wraper}>
         <TouchableOpacity onPress={toggleModal} style={styles.btn}>
-          <Image source={R.images.iconRun2} style={{width: 50, height: 50}} />
+          <Image
+            source={R.images.iconRun4}
+            style={{
+              width: WIDTHXD(100),
+              height: WIDTHXD(100),
+            }}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -24,6 +30,7 @@ export default PlussModal;
 
 const styles = StyleSheet.create({
   btn: {
+    backgroundColor: R.colors.main,
     width: WIDTHXD(144),
     height: WIDTHXD(144),
     justifyContent: 'center',
