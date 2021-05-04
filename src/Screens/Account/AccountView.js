@@ -4,27 +4,35 @@ import Header from '../../components/Header/Header';
 import Item from './Item';
 import R from '../../assets/R';
 import {getFontXD} from '../../Config/Functions';
+import {
+  PROFILE,
+  PAPER,
+  CHANGEPASSWORD,
+  QUESTION,
+  FEEDBACK,
+  SETTING,
+} from '../../routers/ScreenNames';
 
 const listItem1 = [
   {
     id: '1',
     title: 'Thông tin cá nhân',
     description: 'Danh sách tin tức',
-    screen: 'TKB',
+    screen: PROFILE,
     icon: R.images.user,
   },
   {
     id: '2',
     title: 'Giấy tờ',
     description: 'Danh sách các hoạt động',
-    screen: 'TKB',
+    screen: PAPER,
     icon: R.images.page,
   },
   {
     id: '3',
     title: 'Đổi mật khẩu',
     description: 'Danh sách việc làm,tin tuyển dụng',
-    screen: 'TKB',
+    screen: CHANGEPASSWORD,
     icon: R.images.changePass,
   },
 ];
@@ -33,7 +41,7 @@ const listItem2 = [
     id: '4',
     title: 'Câu hỏi thường gặp',
     description: 'Thông tin học bổng',
-    screen: 'TKB',
+    screen: QUESTION,
     icon: R.images.qa,
   },
 
@@ -41,14 +49,14 @@ const listItem2 = [
     id: '6',
     title: 'Phản hồi',
     description: 'Thông tin học bổng',
-    screen: 'TKB',
+    screen: FEEDBACK,
     icon: R.images.feedback,
   },
   {
     id: '7',
     title: 'Cài đặt',
     description: 'Thông tin học bổng',
-    screen: 'TKB',
+    screen: SETTING,
     icon: R.images.setting,
   },
 ];
@@ -59,13 +67,13 @@ const AccountView = (props) => {
       <Header title={'Tài khoản'} />
       <View style={styles.container}>
         {listItem1.map((item) => (
-          <Item item={item} />
+          <Item key={item.id} item={item} />
         ))}
 
         <View style={{height: 10}} />
 
         {listItem2.map((item) => (
-          <Item item={item} />
+          <Item key={item.id} item={item} />
         ))}
         <View style={{height: 10}} />
 

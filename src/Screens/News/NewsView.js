@@ -4,34 +4,35 @@ import Header from '../../components/Header/Header';
 import Item from './Item';
 import R from '../../assets/R';
 import {getFontXD} from '../../Config/Functions';
+import {TABLENEWS, BUSTLE, JOB, SCHOLARSHIP} from '../../routers/ScreenNames';
 
 const listItem = [
   {
     id: '1',
     title: 'Bảng tin',
     description: 'Danh sách tin tức',
-    screen: 'TKB',
+    screen: TABLENEWS,
     icon: R.images.newspaper,
   },
   {
     id: '2',
     title: 'Hoạt động',
     description: 'Danh sách các hoạt động',
-    screen: 'TKB',
+    screen: BUSTLE,
     icon: R.images.active,
   },
   {
     id: '3',
     title: 'Việc làm',
     description: 'Danh sách việc làm,tin tuyển dụng',
-    screen: 'TKB',
+    screen: JOB,
     icon: R.images.job,
   },
   {
     id: '4',
     title: 'Học bổng',
     description: 'Thông tin học bổng',
-    screen: 'TKB',
+    screen: SCHOLARSHIP,
     icon: R.images.education,
   },
 ];

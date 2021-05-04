@@ -13,3 +13,21 @@ export const REGISTERSUBJECT = 'REGISTERSUBJECT';
 
 export const RESULTGRADE = 'RESULTGRADE';
 export const SERVEY = 'SERVEY';
+
+export const BUSTLE = 'BUSTLE';
+export const JOB = 'JOB';
+
+export const SCHOLARSHIP = 'SCHOLARSHIP';
+export const TABLENEWS = 'TABLENEWS';
+
+export const NOTIFICATION = 'NOTIFICATION';
+
+//Account
+export const CHANGEPASSWORD = 'CHANGEPASSWORD';
+export const FEEDBACK = 'FEEDBACK';
+
+export const PAPER = 'PAPER';
+export const PROFILE = 'PROFILE';
+
+export const QUESTION = 'QUESTION';
+export const SETTING = 'SETTING';

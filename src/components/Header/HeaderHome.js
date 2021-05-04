@@ -18,6 +18,7 @@ import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 // import SnackBar from '../SnackBar';
 // import AppText from '../AppText';
+import {NOTIFICATION} from '../../routers/ScreenNames';
 
 const Header = (props) => {
   const {title, isBack} = props;
@@ -36,11 +37,11 @@ const Header = (props) => {
         </View>
         <TouchableOpacity
           style={{width: 35, height: 30}}
-          onPress={() => navigate.goBack()}>
+          onPress={() => navigate.navigate(NOTIFICATION)}>
           <Icon color={'white'} name={'notifications-outline'} size={25} />
         </TouchableOpacity>
       </View>
-      <View style={{flex: 1, paddingHorizontal: 20}}>
+      <View style={{flex: 1, paddingHorizontal: 20, marginTop: 5}}>
         <View style={styles.wrapContent}>
           <View style={styles.container}>
             <View style={{justifyContent: 'center'}}>

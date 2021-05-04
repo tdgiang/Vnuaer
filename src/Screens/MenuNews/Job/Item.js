@@ -1,23 +1,18 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
-import R from '../../assets/R';
-import {getFontXD} from '../../Config/Functions';
-import {useNavigation} from '@react-navigation/native';
-
+import {View, Text, StyleSheet, Image} from 'react-native';
+import R from '../../../assets/R';
+import {getFontXD} from '../../../Config/Functions';
+import Icon from 'react-native-vector-icons/AntDesign';
 const Item = (props) => {
-  const navigation = useNavigation();
-
-  const {title, screen, description, icon} = props.item;
+  const {title, icon, id} = props.item;
   return (
-    <TouchableOpacity
-      onPress={() => navigation.navigate(screen)}
-      style={styles.container}>
+    <View key={id} style={styles.container}>
       <Image style={styles.imgIcon} source={icon} resizeMode={'cover'} />
       <View style={styles.wrapContent}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.txt}>{description}</Text>
+        <Icon name={'right'} size={16} />
       </View>
-    </TouchableOpacity>
+    </View>
   );
 };
 
@@ -28,9 +23,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 10,
     paddingHorizontal: 10,
-    borderRadius: 5,
     shadowColor: R.colors.black,
-    paddingHorizontal: 10,
     shadowOffset: {
       width: 0,
       height: 1,
@@ -38,20 +31,21 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 1.84,
     elevation: 2,
-    marginTop: 15,
+    marginBottom: 1,
   },
   imgIcon: {
-    width: 70,
-    height: 70,
+    width: 35,
+    height: 35,
   },
   wrapContent: {
-    paddingLeft: 20,
-    height: 50,
+    paddingLeft: 15,
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   title: {
-    fontSize: getFontXD(52),
-    fontWeight: 'bold',
-    marginBottom: 10,
+    fontSize: getFontXD(46),
   },
   txt: {
     fontSize: getFontXD(42),
