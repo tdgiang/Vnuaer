@@ -21,7 +21,7 @@ const HomeView = (props) => {
           }}
           renderItem={({item}) => (
             <View style={styles.containerItem}>
-              <Image source={R.images.logo} style={styles.imgIcon} />
+              <Image source={item.icon} style={styles.imgIcon} />
               <Text style={styles.txtTitle}>{item.title}</Text>
             </View>
           )}
@@ -47,11 +47,11 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 1,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 3,
+    shadowRadius: 1.84,
+    elevation: 2,
     paddingHorizontal: 10,
     paddingVertical: 10,
   },

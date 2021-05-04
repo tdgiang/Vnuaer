@@ -4,34 +4,35 @@ import Header from '../../components/Header/Header';
 import Item from './Item';
 import R from '../../assets/R';
 import {getFontXD} from '../../Config/Functions';
+
 const listItem = [
   {
     id: '1',
     title: 'Bảng tin',
     description: 'Danh sách tin tức',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.newspaper,
   },
   {
     id: '2',
     title: 'Hoạt động',
     description: 'Danh sách các hoạt động',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.active,
   },
   {
     id: '3',
     title: 'Việc làm',
     description: 'Danh sách việc làm,tin tuyển dụng',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.job,
   },
   {
     id: '4',
     title: 'Học bổng',
     description: 'Thông tin học bổng',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.education,
   },
 ];
 

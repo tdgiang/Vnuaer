@@ -4,9 +4,9 @@ import R from '../../assets/R';
 import {getFontXD} from '../../Config/Functions';
 import Icon from 'react-native-vector-icons/AntDesign';
 const Item = (props) => {
-  const {title, icon} = props.item;
+  const {title, icon, id} = props.item;
   return (
-    <View style={styles.container}>
+    <View key={id} style={styles.container}>
       <Image style={styles.imgIcon} source={icon} resizeMode={'cover'} />
       <View style={styles.wrapContent}>
         <Text style={styles.title}>{title}</Text>
@@ -31,10 +31,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 1.84,
     elevation: 2,
+    marginBottom: 1,
   },
   imgIcon: {
-    width: 30,
-    height: 30,
+    width: 35,
+    height: 35,
   },
   wrapContent: {
     paddingLeft: 15,

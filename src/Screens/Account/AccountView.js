@@ -11,21 +11,21 @@ const listItem1 = [
     title: 'Thông tin cá nhân',
     description: 'Danh sách tin tức',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.user,
   },
   {
     id: '2',
     title: 'Giấy tờ',
     description: 'Danh sách các hoạt động',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.page,
   },
   {
     id: '3',
     title: 'Đổi mật khẩu',
     description: 'Danh sách việc làm,tin tuyển dụng',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.changePass,
   },
 ];
 const listItem2 = [
@@ -34,7 +34,7 @@ const listItem2 = [
     title: 'Câu hỏi thường gặp',
     description: 'Thông tin học bổng',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.qa,
   },
 
   {
@@ -42,14 +42,14 @@ const listItem2 = [
     title: 'Phản hồi',
     description: 'Thông tin học bổng',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.feedback,
   },
   {
     id: '7',
     title: 'Cài đặt',
     description: 'Thông tin học bổng',
     screen: 'TKB',
-    icon: R.images.logo,
+    icon: R.images.setting,
   },
 ];
 
@@ -72,7 +72,7 @@ const AccountView = (props) => {
         <View style={styles.containerItem}>
           <Image
             style={styles.imgIcon}
-            source={R.images.iconRun}
+            source={R.images.logout}
             resizeMode={'cover'}
           />
           <View style={styles.wrapContent}>

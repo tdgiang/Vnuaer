@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   imgIcon: {
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
   },
   wrapContent: {
     paddingLeft: 20,
