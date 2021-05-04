@@ -1,10 +1,20 @@
 import React, {Component} from 'react';
-import {View, Text, Image, StyleSheet, FlatList} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 import R from '../../assets/R';
 import HeaderHome from '../../components/Header/HeaderHome';
 import {getFontXD} from '../../Config/Functions';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeView = (props) => {
+  const navigation = useNavigation();
+
   const {listItem} = props;
   return (
     <View style={{flex: 1}}>
@@ -20,10 +30,12 @@ const HomeView = (props) => {
             marginBottom: 10,
           }}
           renderItem={({item}) => (
-            <View style={styles.containerItem}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate(item.screen)}
+              style={styles.containerItem}>
               <Image source={item.icon} style={styles.imgIcon} />
               <Text style={styles.txtTitle}>{item.title}</Text>
-            </View>
+            </TouchableOpacity>
           )}
           keyExtractor={(item) => item.id}
         />
