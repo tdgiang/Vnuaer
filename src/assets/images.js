@@ -27,13 +27,13 @@ const images = {
   education: require('./images/education.png'),
 
   //Account
-  user: require('./images/curriculum.png'),
-  page: require('./images/document.png'),
-  changePass: require('./images/password.png'),
+  user: require('./images/iconProfile.png'),
+  page: require('./images/iconPaper1.png'),
+  changePass: require('./images/iconLock.png'),
   qa: require('./images/qa.png'),
-  feedback: require('./images/feedback.png'),
-  setting: require('./images/reload.png'),
-  logout: require('./images/logout.png'),
+  feedback: require('./images/iconFeedback.png'),
+  setting: require('./images/iconSetting.png'),
+  logout: require('./images/iconLogout.png'),
 };
 
 export default images;
