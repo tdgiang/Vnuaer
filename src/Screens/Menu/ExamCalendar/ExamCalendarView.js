@@ -12,7 +12,7 @@ const DATA = [
   {
     
     date:'20/02/2021',
-    subject:'Lập trình hướng đối tượng',
+    subject:'Lập trình hướng đối tượng.',
     timebegin:'12:45',
     timefinish:'15:30',
     sbd:'SV001',
@@ -44,11 +44,11 @@ const DATA = [
 ]
 const Item = ({ date, subject, timebegin, timefinish, sbd, over}) => (
   <TouchableOpacity style={{flexDirection:'row'}} >
-    <View style={{alignItems:'center',justifyContent:'center',borderTopLeftRadius:20,borderBottomLeftRadius:20,backgroundColor:R.colors.white}}>
+    <View style={styles.containTime} >
       <Text style={{fontSize:getFontXD(50)}}>{date.slice(0,2)}</Text>
       <Text style={{fontSize:getFontXD(40)}}>{date.slice(3,12)}</Text>
     </View>
-    <View style={{borderRightWidth:2,borderRightColor:'red'}}></View>
+    <View style={styles.strike}></View>
     <View style={styles.containContent}>
       <Text style={styles.title}>{subject}</Text>
       <View style={styles.subdetail}>
@@ -67,7 +67,7 @@ const ExamCalendarView = (props) => {
   );
   return (
     <View style={{flex: 1}}>
-      <Header isBack={true} title={'Lịch thi'} />
+      <Header isBack={true} title={'Lịch thi'}/>
       <FlatList
         showsVerticalScrollIndicator={false}
         data={DATA}
@@ -80,7 +80,7 @@ const ExamCalendarView = (props) => {
 const styles = StyleSheet.create({
   container:{
     flexDirection:'row',
-    borderRadius:20,
+    borderRadius:5,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -125,7 +125,51 @@ const styles = StyleSheet.create({
   containContent:{
     flex:1,
     padding:10,
-    borderTopLeftRadius:20,borderBottomLeftRadius:20
+    borderTopRightRadius:10,
+    borderBottomRightRadius:10,
+    backgroundColor:R.colors.white,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 3,
+    padding:10,
+    marginVertical:5
+  },
+  containTime:{
+    padding:10,
+    alignItems:'center',
+    justifyContent:'center',
+    borderTopLeftRadius:10,
+    borderBottomLeftRadius:10,
+    backgroundColor:R.colors.white,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 3,
+    alignItems:'center',
+    padding:10,
+    marginVertical:5
+  },
+  strike:{
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 3,
+    marginVertical:5,
+    borderRightWidth:2,
+    borderRightColor: R.colors.color777
   }
 })
 export default ExamCalendarView;
