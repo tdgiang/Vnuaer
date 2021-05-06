@@ -3,30 +3,36 @@ import {View, Text} from 'react-native';
 import Header from '../../../components/Header/Header';
 import Item from './Item';
 import R from '../../../assets/R';
+import {
+  RECRUIT,
+  INTERSHIP,
+  JOBNOW,
+  OVERTIME,
+} from '../../../routers/ScreenNames';
 
 const listItem = [
   {
     id: '1',
     title: 'Tuyển dụng',
-    screen: 'TKB',
+    screen: RECRUIT,
     icon: R.images.user,
   },
   {
     id: '2',
     title: 'Thực tập sinh',
-    screen: 'TKB',
+    screen: INTERSHIP,
     icon: R.images.page,
   },
   {
     id: '3',
     title: 'Việc làm thêm',
-    screen: 'TKB',
+    screen: OVERTIME,
     icon: R.images.changePass,
   },
   {
     id: '4',
     title: 'Việc làm trong ngày',
-    screen: 'TKB',
+    screen: JOBNOW,
     icon: R.images.changePass,
   },
 ];
