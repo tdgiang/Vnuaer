@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import R from '../../../assets/R';
 import {getFontXD} from '../../../Config/Functions';
 import Icon from 'react-native-vector-icons/AntDesign';
+import {useNavigation} from '@react-navigation/native';
 const Item = (props) => {
-  const {title, icon, id} = props.item;
+  const navigation = useNavigation();
+  const {title, icon, id, screen} = props.item;
   return (
-    <View key={id} style={styles.container}>
+    <TouchableOpacity
+      onPress={() => navigation.navigate(screen)}
+      key={id}
+      style={styles.container}>
       <Image style={styles.imgIcon} source={icon} resizeMode={'cover'} />
       <View style={styles.wrapContent}>
         <Text style={styles.title}>{title}</Text>
         <Icon name={'right'} size={16} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

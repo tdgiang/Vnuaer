@@ -31,3 +31,9 @@ export const PROFILE = 'PROFILE';
 
 export const QUESTION = 'QUESTION';
 export const SETTING = 'SETTING';
+
+export const INTERSHIP = 'INTERSHIP';
+export const JOBNOW = 'JOBNOW';
+
+export const OVERTIME = 'OVERTIME';
+export const RECRUIT = 'RECRUIT';

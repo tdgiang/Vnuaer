@@ -30,6 +30,11 @@ import Profile from '../Screens/MenuAccount/Profile/Profile';
 import Question from '../Screens/MenuAccount/Question/Question';
 import Setting from '../Screens/MenuAccount/Setting/Setting';
 
+import Intership from '../Screens/MenuNews/Job/Intership';
+import JobNow from '../Screens/MenuNews/Job/JobNow';
+import OverTime from '../Screens/MenuNews/Job/OverTime';
+import Recruit from '../Screens/MenuNews/Job/Recruit';
+
 import * as ScreenName from './ScreenNames';
 
 const Stack = createStackNavigator();
@@ -45,7 +50,6 @@ function MyStack(props) {
       <Stack.Screen name={ScreenName.LOGINSCREEN} component={Login} />
       <Stack.Screen name={ScreenName.TABBAR} component={TabNavigator} />
       <Stack.Screen name={ScreenName.TIMETABLE} component={TimeTable} />
-
       <Stack.Screen name={ScreenName.CURRICULUM} component={Curriculum} />
       <Stack.Screen name={ScreenName.EVALUATE} component={Evaluate} />
       <Stack.Screen name={ScreenName.EXAMCALENDAR} component={ExamCalendar} />
@@ -62,6 +66,11 @@ function MyStack(props) {
       <Stack.Screen name={ScreenName.JOB} component={Job} />
       <Stack.Screen name={ScreenName.SCHOLARSHIP} component={Scholarship} />
       <Stack.Screen name={ScreenName.TABLENEWS} component={TableNews} />
+
+      <Stack.Screen name={ScreenName.INTERSHIP} component={Intership} />
+      <Stack.Screen name={ScreenName.JOBNOW} component={JobNow} />
+      <Stack.Screen name={ScreenName.OVERTIME} component={OverTime} />
+      <Stack.Screen name={ScreenName.RECRUIT} component={Recruit} />
 
       <Stack.Screen
         name={ScreenName.CHANGEPASSWORD}
