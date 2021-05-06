@@ -34,6 +34,9 @@ const images = {
   feedback: require('./images/iconFeedback.png'),
   setting: require('./images/iconSetting.png'),
   logout: require('./images/iconLogout.png'),
+
+  //News_Feed
+  notice: require('./images/notice.jpg')
 };
 
 export default images;
