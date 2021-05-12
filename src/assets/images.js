@@ -35,8 +35,12 @@ const images = {
   setting: require('./images/iconSetting.png'),
   logout: require('./images/iconLogout.png'),
 
+<<<<<<< HEAD
   //News_Feed
   notice: require('./images/notice.jpg')
+=======
+  
+>>>>>>> 9d91372ffb353dfbb042bf978967c21a2ce3ffb7
 };
 
 export default images;
